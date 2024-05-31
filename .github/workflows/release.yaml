@@ -2,7 +2,7 @@ name: Deploy Release
 on:
   push:
     branches:
-      - 'test'     
+      - 'dev'     
 jobs:
   release:
     permissions: write-all
