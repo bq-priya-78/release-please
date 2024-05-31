@@ -2,7 +2,7 @@ name: Deploy Release
 on:
   push:
     branches:
-      - 'main'     
+      - 'dev'     
 jobs:
   release:
     permissions: write-all
@@ -23,3 +23,5 @@ jobs:
     with:
       tag: ${{ needs.release.outputs.tag }}
     secrets: inherit
+
+
