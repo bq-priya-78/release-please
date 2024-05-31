@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/bq-priya-78/release-please/compare/v1.3.0...v1.4.0) (2024-05-31)
+
+
+### Features
+
+* runrp ([1a4d667](https://github.com/bq-priya-78/release-please/commit/1a4d667189e4120e70d6adc4834474c0b71215bd))
+
 ## [1.3.0](https://github.com/bq-priya-78/release-please/compare/v1.2.0...v1.3.0) (2024-05-31)
 
 
