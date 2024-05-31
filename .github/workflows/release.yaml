@@ -2,7 +2,7 @@ name: Deploy Release
 on:
   push:
     branches:
-      - 'feat/release-please'     
+      - 'main'     
 jobs:
   release:
     permissions: write-all
@@ -16,10 +16,10 @@ jobs:
         with:
           release-type: go
           token: ${{secrets.RELEASE_PLEASE_TOKEN}}
-          
+
   deploy-services:
     needs: release
-    uses: bq-priya-78/release-please/.github/workflows/test.yaml@feat/release-please
+    uses: bq-priya-78/release-please/.github/workflows/test.yaml@main
     if: ${{ needs.release.outputs.release_created }}
     with:
       tag: ${{ needs.release.outputs.tag }}
