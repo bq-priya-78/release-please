@@ -16,6 +16,7 @@ jobs:
         with:
           release-type: go
           token: ${{secrets.RELEASE_PLEASE_TOKEN}}
+          
   deploy-services:
     needs: release
     uses: bq-priya-78/release-please/.github/workflows/test.yaml@feat/release-please
