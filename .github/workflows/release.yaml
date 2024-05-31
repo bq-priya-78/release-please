@@ -1,0 +1,25 @@
+name: Deploy Release
+on:
+  push:
+    branches:
+      - 'main'     
+jobs:
+  release:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      tag: ${{ steps.release.outputs.tag_name }}
+    steps:
+      - uses: GoogleCloudPlatform/release-please-action@v3.1
+        id: release                                
+        with:
+          release-type: go
+          token: ${{secrets.RELEASE_PLEASE_TOKEN}}
+  deploy-services:
+    needs: release
+    uses: bq-priya-78/release-please/.github/workflows/test.yaml@main
+    if: ${{ needs.release.outputs.release_created }}
+    with:
+      tag: ${{ needs.release.outputs.tag }}
+    secrets: inherit
