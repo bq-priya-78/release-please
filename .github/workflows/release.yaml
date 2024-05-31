@@ -15,7 +15,6 @@ jobs:
         id: release                                
         with:
           release-type: go
-        
           token: ${{secrets.RELEASE_PLEASE_TOKEN}}
   deploy-services:
     needs: release
