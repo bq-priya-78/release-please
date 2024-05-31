@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/bq-priya-78/release-please/compare/v1.0.0...v1.1.0) (2024-05-31)
+
+
+### Features
+
+* test ([9e54fcc](https://github.com/bq-priya-78/release-please/commit/9e54fcc18ac63e109ed2997d2934e6631fb027a8))
+
 ## 1.0.0 (2024-05-31)
 
 
